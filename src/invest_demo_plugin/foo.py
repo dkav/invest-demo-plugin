@@ -27,7 +27,7 @@ MODEL_SPEC = spec.ModelSpec(
                 "The folder where all the model's output files will be written. If "
                 "this folder does not exist, it will be created. If data already "
                 "exists in the folder, it will be overwritten."),
-            contents={},
+            contents=[],
             must_exist=False,
             permissions="rwx"
         ),
