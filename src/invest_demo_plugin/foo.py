@@ -15,6 +15,7 @@ LOGGER = logging.getLogger(__name__)
 MODEL_SPEC = spec.ModelSpec(
     model_id="demo",
     model_title=gettext("Demo Plugin"),
+    module_name=__name__,
     userguide='',
     input_field_order=[
         ['workspace_dir', 'results_suffix'],
@@ -67,7 +68,8 @@ MODEL_SPEC = spec.ModelSpec(
     ],
     outputs=[
         spec.SingleBandRasterOutput(
-            id="result.tif",
+            id="result",
+            path="result.tif",
             about="Raster multiplied by factor",
             data_type=float,
             units=None
