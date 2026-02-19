@@ -13,7 +13,7 @@ dynamic = ["version"]
 dependencies = [
   "pygeoprocessing",
   "taskgraph",
-  "natcap.invest>=3.17.0"
+  "natcap.invest>=3.18.0"
 ]
 
 [tool.setuptools_scm]
