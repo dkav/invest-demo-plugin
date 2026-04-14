@@ -54,5 +54,5 @@ conda_dependencies = [
 
 [tool.setuptools.package-data]
 # Use this to include any non-python files in your package distribution,
-# such as sample data, or a non-python executable
+# such as data required by your package, or a non-python executable
 foo = ["data/foo"]
