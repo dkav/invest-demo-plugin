@@ -13,7 +13,7 @@ dynamic = ["version"]
 dependencies = [
   "pygeoprocessing",
   "taskgraph",
-  "natcap.invest>=3.17.0"
+  "natcap.invest>=3.18.0"
 ]
 
 [tool.setuptools_scm]
@@ -49,10 +49,10 @@ conda_dependencies = [
   "gdal<3.11",  # missing libgdal.so issue happened with gdal 3.11
   "geotiff>=1.7.3",  # earlier versions don't support space in CONDA_PREFIX
   "pygeoprocessing",  # install from conda-forge rather than building wheel with pip
-  "natcap.invest>=3.17.0"  # install from conda-forge rather than building wheel with pip
+  "natcap.invest>=3.18.0"  # install from conda-forge rather than building wheel with pip
 ]
 
 [tool.setuptools.package-data]
 # Use this to include any non-python files in your package distribution,
-# such as sample data, or a non-python executable
+# such as data required by your package, or a non-python executable
 foo = ["data/foo"]
