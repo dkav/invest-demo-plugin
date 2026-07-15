@@ -8,12 +8,18 @@ name = "invest-demo-plugin"
 # Using setuptools_scm is not required, but we highly recommend it
 dynamic = ["version"]  
 
-# All direct python dependencies should be listed here. If a package is
-# available from conda-forge, it can also be listed under the conda_dependencies.
+# All direct python dependencies should be listed here.
+#
+# If you would like a dependency to be installed from conda-forge instead of
+# PyPI when the plugin environment is created, you can include it in
+# tool.natcap.invest.conda_dependencies. However, direct dependencies must
+# still be listed here because this is the standard package metadata, whereas
+# the conda_dependencies section is specific to invest. If a dependency is
+# included in both sections, make sure the versions are consistent.
 dependencies = [
   "pygeoprocessing",
   "taskgraph",
-  "natcap.invest>=3.18.0"
+  "natcap.invest>=3.19.0"
 ]
 
 [tool.setuptools_scm]
@@ -43,13 +49,13 @@ package_name = "invest_demo_plugin"
 # conda-forge. We have disabled the default channel due to Anaconda's licensing.
 #
 # Python is installed into the plugin environment by default, but you may 
-# include it here if you wish to specify a particular version
+# include it here if you wish to specify a particular version.
 conda_dependencies = [
   "python==3.13",  
   "gdal<3.11",  # missing libgdal.so issue happened with gdal 3.11
   "geotiff>=1.7.3",  # earlier versions don't support space in CONDA_PREFIX
   "pygeoprocessing",  # install from conda-forge rather than building wheel with pip
-  "natcap.invest>=3.18.0"  # install from conda-forge rather than building wheel with pip
+  "natcap.invest>=3.19.0"  # install from conda-forge rather than building wheel with pip
 ]
 
 [tool.setuptools.package-data]

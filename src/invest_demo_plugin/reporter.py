@@ -48,7 +48,7 @@ def report(file_registry: dict, args_dict: dict, model_spec: ModelSpec,
     section_header = f'Multiplication factor {args_dict["factor"]}'
 
     input_raster_stats_table = raster_utils.raster_inputs_summary(
-        args_dict).to_html(na_rep='')
+        args_dict, model_spec).to_html(na_rep='')
 
     output_raster_stats_table = raster_utils.raster_workspace_summary(
         file_registry).to_html(na_rep='')
